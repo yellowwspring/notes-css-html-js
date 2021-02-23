@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #edcf9d 5%, #f7768c 40%, #be6bf7 60%) no-repeat;
+}
+
+
+.counter-container{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:  center;
+    margin: 30px 50px;
+}
+
+.counter{
+    color: white;
+    font-size:  60px;
+    margin-top: 10px;
+}
+
+@media(max-width: 580px){
+    body{
+        flex-direction: column;
+    }
+}
