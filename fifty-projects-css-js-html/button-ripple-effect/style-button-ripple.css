@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+button{
+    background-color: #755eda;
+    /*background-position: inherit;*/
+    border: 1px #755eda solid;
+    font-size: 15px;
+    /*text-align: center;*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 10px 0;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    position: relative;
+    align-self: center; /*выравнивает по центру*/
+    /*max-width: 720px;*/
+    /*position: center;*/
+    transition-duration: 0.5s; /* transition-duration для определения скорости эффекта «Hover»*/
+}
+button:hover{
+    opacity: 95%;
+}
+
+button:focus{
+    outline:none;
+}
+
+button .circle{
+    position: absolute;
+    background-color: #fff;
+    width: 100px ;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+
+}
+
+@keyframes scale {
+    to{
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
