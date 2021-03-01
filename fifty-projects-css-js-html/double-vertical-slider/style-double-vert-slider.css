@@ -1,0 +1,98 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Bebas Neue', 'sans-serif';
+    height: 100vh;
+}
+
+.slider-container{
+    /*float: left;*/
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slide{
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*Блок слева (div) по ширине 100% от того, что сверху 35% от body*/
+.left-slide > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.left-slide h1{
+    font-size: 300%;
+    margin-bottom: 5px;
+    margin-top: -30px;
+}
+
+.right-slide{
+    line-height: 100%;
+    position: relative;
+    top: 0;
+    left: 35%;
+    width: 65%;
+}
+
+.right-slide > div {
+    /*float: right;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button{
+    background-color: #f9f8f8;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 15px;
+}
+
+/*Размещение кнопок вверх-вниз*/
+.slider-container .action-buttons button{
+    position: absolute;
+    left:35%;
+    top: 50%;
+    z-index: 100;
+}
+button:focus, button:hover{
+    outline: none;
+    background-color: #e5e4e4;
+    opacity: 80%;
+}
+
+
+.slider-container .action-buttons .down-button{
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button{
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
