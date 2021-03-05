@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.text{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+
+.logo{
+    width: 150px;
+}
+
+
+.nav-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.open-btn{
+    position: fixed;
+    top: 10px;
+    color: #a827c8;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    left: 10px;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.nav.visible{
+    transform: translateX(0);
+}
+
+.nav-pink{
+    background-color: rgb(167, 39, 199);
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: 0.4s;
+}
+
+.nav-pink.visible{
+    transition-delay: 0s;
+}
+
+.nav-nude{
+    background-color: rgb(198, 174, 212);
+    width: 95%;
+    transition-delay: 0.2s;
+}
+
+.nav-nude.visible{
+    transition-delay: 0.2s;
+}
+
+.nav-green{
+    background-color: #0f110f;
+    width: 95%;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+}
+
+.nav-green.visible{
+    transition-delay: 0.4s;
+}
+
+.close-btn{
+    color: #a827c8;
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    font-weight: lighter;
+    font-size: 30px;
+    right: 30px;
+    opacity: 0.3;
+}
+
+.navigation-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation-list li{
+    margin: 20px 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navigation-list li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 23px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.navigation-list ul{
+    padding-left: 20px;
+    list-style-type: none;
+}
